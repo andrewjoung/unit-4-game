@@ -1,0 +1,64 @@
+body {
+    background-image:url("../images/background.jpeg");
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 960px;
+    margin:0 auto;
+}
+
+.logo-div {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#characterChoiceDiv {
+    width:fit-content;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.characterCard {
+    float:left;
+    margin-left:10px;
+    margin-right:10px;
+    width:180px;
+    height:160px;
+    text-align:center;
+    background-color:#ffffffa3;
+    border: 4px solid #00e400;
+}
+
+.characterName, .attackPoint {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.characterImage {
+    width:140px;
+    height:100px;
+}
+
+.sectionHeading {
+    color: #ffffff;
+    text-shadow: 1px 0px 6px black;
+    margin-top:0;
+}
+
+#selectedCharacterDiv {
+    width:fit-content;
+    height:180px;
+}
+
+#selectedCharacterDiv, #enemiesAvailable, #fightSection, #defenderDiv {
+    padding-left:74px;
+}
+
+#attackButton {
+    margin-bottom: 15px;
+}
+#logo {
+    width: 200px;
+    height: 100px;
+}
