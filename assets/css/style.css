@@ -30,7 +30,7 @@ body {
     border: 4px solid #00e400;
 }
 
-.characterName, .attackPoint {
+.characterName, .healthPoint {
     margin-top: 5px;
     margin-bottom: 5px;
 }
