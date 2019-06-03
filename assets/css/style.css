@@ -21,7 +21,7 @@ body {
 
 .characterCard {
     float:left;
-    margin-left:10px;
+    /*margin-left:10px;*/
     margin-right:10px;
     width:180px;
     height:160px;
@@ -44,11 +44,12 @@ body {
     color: #ffffff;
     text-shadow: 1px 0px 6px black;
     margin-top:0;
+    margin-bottom:5px;
 }
 
 #selectedCharacterDiv {
     width:fit-content;
-    height:180px;
+    height:220px;
 }
 
 #selectedCharacterDiv, #enemiesAvailable, #fightSection, #defenderDiv {
