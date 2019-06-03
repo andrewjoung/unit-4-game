@@ -2,6 +2,9 @@
 
 $(document).ready(function(){
 
+    //orignal state of the DOM for when we want to restart the game
+    var originalState = $(".container").clone();
+
     //variable to hold information about the game state
     var gameState = {
         yourCharacter: {name:"", health: 0, attack:0, baseAttack: 0, counter: 0},
@@ -124,7 +127,22 @@ $(document).ready(function(){
             characterHealthElement.text(gameState.yourCharacter.health - gameState.defender.counter);
             gameState.yourCharacter.health -= gameState.defender.counter;
 
-            console.log(gameState.yourCharacter.health);
+
+            var attackText = $("#attackText");
+            attackText.attr("id", "attackText");
+            attackText.css("color", "#ffffff");
+            attackText.css("text-shadow", "1px 0px 6px black");
+            attackText.text("You've attacked " + gameState.defender.name + " for " + gameState.yourCharacter.attack + " damage");
+
+            var attackedText = $("#attackedText");
+            attackedText.attr("id", "attackedText");
+            attackedText.css("color", "#ffffff");
+            attackedText.css("text-shadow", "1px 0px 8px black");
+            attackedText.text(gameState.defender.name + " attacked you for " + gameState.defender.counter + " damage");
+            //console.log(gameState.yourCharacter.health);
+
+            $("#attackTextDiv").append(attackText);
+            $("#attackTextDiv").append(attackedText);
 
             gameState.yourCharacter.attack += gameState.yourCharacter.baseAttack;
 
@@ -132,10 +150,14 @@ $(document).ready(function(){
             if(gameState.defender.health <= 0) {
                 numClicks = 1;
                 gameState.playing = false; 
+                $("#attackText").text("");
+                $("#attackedText").text("")
                 $("#attackButton").attr("disabled", true);
                 gameState.defenderDomElement.remove();
             } else if(gameState.yourCharacter.health <= 0) { //user has lost
                 alert("You've lost!");
+                $(".container").replaceWith(originalState);
+
             }
 
         }
