@@ -1,4 +1,8 @@
 
+//TODO:
+//create a global initalizeCharacters that will put in data on set onClick functions for 
+//the characters 
+//Have all characters initalized once the user loses or a reset button is presed
 
 $(document).ready(function(){
 
@@ -157,7 +161,7 @@ $(document).ready(function(){
             } else if(gameState.yourCharacter.health <= 0) { //user has lost
                 alert("You've lost!");
                 $(".container").replaceWith(originalState);
-
+                //TODO: add code to reset the game/characters when user loses
             }
 
         }
