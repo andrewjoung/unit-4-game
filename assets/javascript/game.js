@@ -158,6 +158,17 @@ $(document).ready(function(){
  
         }
 
+        //create a new DOM element that will act as a restart button
+        var restartButton = $("<button>");
+        restartButton.attr("id", "restartButton");
+        restartButton.text("Restart");
+
+        //add an on click listener to the restart button
+        //pressing the button will refresh the page allowing the DOM and the JavaScript to go back to the orignal state
+        restartButton.on("click", function(){
+            location.reload();
+        });
+
         //defender has been taken out 
         if(gameState.defender.health <= 0) {
             numClicks = 1; //set numClicks back to one so that the user may choose another defender
@@ -169,6 +180,13 @@ $(document).ready(function(){
             $("#attackButton").attr("disabled", true);
             //remove the defender from the game
             gameState.defenderDomElement.remove();
+            if(gameState.remainingCharacters.length === 0) {
+                var winText = $("<p>");
+                winText.attr("id", "winText");
+                winText.text("You've won!");
+                $("#attackTextDiv").append(winText);
+                $("#restart").append(restartButton);
+            }
         } 
         
         //if user's character has been taken out
@@ -176,16 +194,6 @@ $(document).ready(function(){
             //the game is no longer in play, disable the attack button
             $("#attackButton").attr("disabled", true);
             gameState.playing = false;
-            //create a new DOM element that will act as a restart button
-            var restartButton = $("<button>");
-            restartButton.attr("id", "restartButton");
-            restartButton.text("Restart");
-
-            //add an on click listener to the restart button
-            //pressing the button will refresh the page allowing the DOM and the JavaScript to go back to the orignal state
-            restartButton.on("click", function(){
-                location.reload();
-            });
 
             //add the restart button to the DOM
             $("#restart").append(restartButton);

@@ -72,7 +72,7 @@ body {
     height: 220px;
 }
 
-#attackText, #attackedText, #gameOverText {
+#attackText, #attackedText, #gameOverText, #winText {
     color: #ffffff;
     text-shadow: 1px 0px 6px black;
 }
