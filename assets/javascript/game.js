@@ -4,6 +4,10 @@
 //Uses JQuery selectors and functions to allow the user to click on the players and play the game.
 //Written for the UW Coding Bootcamp homework assignment number 4. 
 
+
+//TODO:
+//readjust the attack and counter attacks of each character
+
 $(document).ready(function(){
 
     //orignal state of the DOM for when we want to restart the game
