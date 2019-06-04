@@ -1,7 +1,8 @@
-
-//TODO:
-//create a global initalizeCharacters that will put in data on set onClick functions for the characters 
-//Have all characters initalized once the user loses or a reset button is presed
+//Author: Andrew Joung
+//June 3rd, 2019
+//The JavaScript that adds logic and interactivity to the StarWars RPG game.
+//Uses JQuery selectors and functions to allow the user to click on the players and play the game.
+//Written for the UW Coding Bootcamp homework assignment number 4. 
 
 $(document).ready(function(){
 
