@@ -52,7 +52,7 @@ body {
     height:220px;
 }
 
-#selectedCharacterDiv, #enemiesAvailable, #fightSection, #defenderDiv {
+#selectedCharacterDiv, #enemiesAvailable, #fightSection, #defenderDiv, #restart {
     padding-left:74px;
 }
 
@@ -66,4 +66,13 @@ body {
 
 #attackTextDiv {
     float:right;
+}
+
+#defenderDiv {
+    height: 220px;
+}
+
+#attackText, #attackedText, #gameOverText {
+    color: #ffffff;
+    text-shadow: 1px 0px 6px black;
 }
