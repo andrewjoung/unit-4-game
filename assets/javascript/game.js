@@ -37,10 +37,12 @@ $(document).ready(function(){
     $("#attackButton").attr("disabled", true);
 
     //add data to each character that we can reference later
-    kenobi.data({name: "Obi-Wan Kenobi", health: 120, attack: 8, baseAttack: 8, counter: 15});
-    skywalker.data({name:"Luke Skywalker", health: 100, attack: 6, baseAttack: 6,  counter: 10});
-    maul.data({name:"Darth Maul", health:150, attack: 10, baseAttack: 10, counter: 20});
-    vader.data({name:"Darth Vader", health: 180, attack: 12, baseAttack: 12, counter: 25});
+    //TODO: 
+    //adjust attack and counter attack for each character to make the game more fair
+    kenobi.data({name: "Obi-Wan Kenobi", health: 130, attack: 10, baseAttack: 10, counter: 10});
+    skywalker.data({name:"Luke Skywalker", health: 120, attack: 10, baseAttack: 10,  counter: 10});
+    maul.data({name:"Darth Maul", health:150, attack: 12, baseAttack: 12, counter: 12});
+    vader.data({name:"Darth Vader", health: 180, attack: 14, baseAttack: 14, counter: 14});
     
     //give each character card an on click function that will intalize the game
     kenobi.on("click", function(){
